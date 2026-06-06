@@ -1,4 +1,4 @@
-# A930 POS Lite
+# Android POS Terminal Application
 
 Android point-of-sale application for PAX payment terminals with EMV card acceptance, host connectivity, terminal parameter management, transaction history, receipts, and value-added service flows.
 
