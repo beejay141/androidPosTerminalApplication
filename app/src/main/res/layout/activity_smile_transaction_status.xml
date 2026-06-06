@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iisysgroup.androidlite.vas.cable.Dstv"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/flexible.example.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundgradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/TextAppearance.AppCompat.Caption"
+            app:title="Smile Data"/>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/smile_transaction_ref_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="@dimen/medium_padding"
+            android:hint="Enter transaction reference number"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="@dimen/small_padding"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--<Button-->
+                <!--android:id="@+id/smile_beneficiaries"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Select Beneficiary"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:backgroundTint="@color/colorGreen"-->
+                <!--android:textColor="@color/white"/>-->
+            <Button
+                android:id="@+id/smile_continue_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/colorGreen"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

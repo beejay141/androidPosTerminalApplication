@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator_layout">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Transaction Details"/>
+
+        <!--app:title="Refund \u0026 Reversal"/>-->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/search_refund"
+        layout="@layout/search_refund"
+        tools:layout_editor_absoluteY="96dp"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/enter_amount"
+        layout="@layout/enter_amount"
+        tools:layout_editor_absoluteY="96dp"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/refund_details"
+        layout="@layout/refund_details"
+        tools:layout_editor_absoluteY="96dp"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/account_select_refund"
+        layout="@layout/account_select_refund"
+        tools:layout_editor_absoluteY="96dp"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/account_select_reversal"
+        layout="@layout/account_select_reversal"
+        tools:layout_editor_absoluteY="96dp"
+        android:visibility="gone"/>
+</android.support.design.widget.CoordinatorLayout>

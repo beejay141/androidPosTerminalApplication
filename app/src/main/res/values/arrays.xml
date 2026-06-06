@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_preference_host_type_entries">
+        <item>TAMS</item>
+        <item>EPMS</item>
+        <item>POSVAS</item>
+    </string-array>
+    <string-array name="list_preference_host_type_entry_values">
+        <item>TAMS</item>
+        <item>EPMS</item>
+        <item>POSVAS</item>
+    </string-array>
+    <string-array name="list_preference_port_type_entries">
+        <item>SSL</item>
+        <item>Open</item>
+    </string-array>
+    <string-array name="list_preference_port_type_entry_values">
+        <item>SSL</item>
+        <item>Open</item>
+    </string-array>
+    <string-array name="list_preference_platform_entries">
+        <item>Test</item>
+        <item>Live</item>
+    </string-array>
+    <string-array name="list_preference_platform_values">
+        <item>Test</item>
+        <item>Live</item>
+    </string-array>
+    <string-array name="bank_codes">
+        <item>044150149</item>
+        <item>023150005</item>
+        <item>063150162</item>
+        <item>050150311</item>
+        <item>084150015</item>
+        <item>040150101</item>
+        <item>214150018</item>
+        <item>070150003</item>
+        <item>011152303</item>
+        <item>030159992</item>
+        <item>301080020</item>
+        <item>082150017</item>
+        <item>014150030</item>
+        <item>023150005</item>
+        <item>076151006</item>
+        <item>221159522</item>
+        <item>068150057</item>
+        <item>232150029</item>
+        <item>033154282</item>
+        <item>032156825</item>
+        <item>215082334</item>
+        <item>035150103</item>
+        <item>057150013</item>
+        <item>058152052</item>
+    </string-array>
+
+    <string-array name="bank_names">
+        <item>ACCESS BANK PLC</item>
+        <item>CITI BANK</item>
+        <item>DIAMOND BANK PLC</item>
+        <item>ECOBANK NIGERIA</item>
+        <item>ENTERPRISE BANK</item>
+        <item>ETB</item>
+        <item>FCMB PLC</item>
+        <item>FIDELITY BANK PLC</item>
+        <item>FIRST BANK PLC</item>
+        <item>HERITAGE BANK</item>
+        <item>JAIZ BANK</item>
+        <item>KEYSTONE BANK PLC</item>
+        <item>MAIN STREET BANK</item>
+        <item>NIB</item>
+        <item>SKYE BANK PLC</item>
+        <item>STANBIC IBTC BANK</item>
+        <item>STANDARD CHARTERED</item>
+        <item>STERLING BANK PLC</item>
+        <item>UBA PLC</item>
+        <item>UNION BANK PLC</item>
+        <item>UNITY BANK PLC</item>
+        <item>WEMA BANK PLC</item>
+        <item>ZENITH BANK PLC</item>
+        <item>GTB</item>
+    </string-array>
+
+
+    <string-array name="vas_energy_title">
+        <item>Eko Electric</item>
+        <item>IBEDC</item>
+        <item>Ikeja Electric</item>
+        <item>Abuja Electric</item>
+        <item>Enugu Electric</item>
+        <!--<item>Kaduna Electric</item>-->
+        <!--<item>Kano Electric</item>-->
+        <item>PortHarcourt Electric</item>
+    </string-array>
+    <string-array name="vas_energy_image">
+        <item>eko_electric_logo </item>
+        <item>ibedc</item>
+        <item>ikeja_electric_logo</item>
+        <item>abuja_electric_logo</item>
+        <item>enugu_electric_logo</item>
+        <!--<item>kaduna_electric</item>-->
+        <!--<item>kano_electric_logo</item>-->
+        <item>port_harcout_electric_logo</item>
+    </string-array>
+
+
+    <string-array name="vas_edu_title" >
+        <item>Waec</item>
+    </string-array>
+    <string-array name="vas_edu_image">
+        <item>waec_logo</item>
+    </string-array>
+
+
+    <string-array name="vas_games_title">
+        <item>Golden Chance</item>
+        <item>PaddyBet</item>
+    </string-array>
+    <string-array name="vas_games_image">
+        <item>golden_chance_logo</item>
+        <item>paddy_bet_logo</item>
+    </string-array>
+
+
+    <string-array name="vas_insurance_image">
+        <item>leadway</item>
+        <item>cornerstone</item>
+    </string-array>
+
+    <string-array name="vas_insurance_title">
+        <item>LEADWAY</item>
+        <item>CORNERSTONE</item>
+
+    </string-array>
+
+    <string-array name="vas_internet_title">
+        <item>Smile</item>
+        <!--<item>Spectranet</item>-->
+        <!--<item>Swift</item>-->
+    </string-array>
+    <string-array name="vas_internet_image">
+        <item>smile_logo</item>
+        <!--<item>spectranet_logo</item>-->
+        <!--<item>swift_logo</item>-->
+    </string-array>
+
+
+    <string-array name="vas_cable_title">
+        <item>DSTV</item>
+        <item>GoTV</item>
+        <item>StarTimes</item>
+        <!--<item>CONSAT</item>-->
+    </string-array>
+    <string-array name="vas_cable_image">
+        <item>dstv_logo</item>
+        <item>gotv_logo</item>
+        <item>startimes_logo</item>
+        <!--<item>consat_logo_1_copy</item>-->
+    </string-array>
+
+    <string-array name="vas_event_title">
+        <item>Afritickets</item>
+    </string-array>
+    <string-array name="vas_event_image">
+        <item>afritickets</item>
+    </string-array>
+
+    <string-array name="vas_money_transfer_title">
+        <item>FETSWALLET</item>
+        <item>GTBank</item>
+        <item>BAXI ATM CARD WITHDRAWAL</item>
+        <item>ECOBANK</item>
+    </string-array>
+    <string-array name="vas_money_transfer_image">
+        <item>download</item>
+        <item>gt_bank</item>
+        <item>baxi_atm_card_withdrawal</item>
+        <item>ecobank</item>
+    </string-array>
+    <string-array name="consat_tv_id_method_spinner">
+        <item>Smartcard Number</item>
+        <item>Customer Number</item>
+    </string-array>
+    <string-array name="vas_airtime_title">
+        <item>MTN</item>
+        <item>Airtel</item>
+        <item>9Mobile</item>
+        <item>Glo</item>
+    </string-array>
+    <string-array name="vas_airtime_image">
+        <item>mtn_logo</item>
+        <item>airtel_logo</item>
+        <item>ninemobile_logo</item>
+        <item>glo_logo</item>
+    </string-array>
+    <string-array name="vas_digipayments_title">
+        <item>Remita</item>
+        <item>Mastercard</item>
+    </string-array>
+    <string-array name="vas_digipayments_image">
+        <item>remita_logo</item>
+        <item>mastercard_logo</item>
+    </string-array>
+</resources>

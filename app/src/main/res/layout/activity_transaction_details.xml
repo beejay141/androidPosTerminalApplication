@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iisysgroup.androidlite.TransactionDetails">
+
+    <Button
+        android:id="@+id/print_transaction"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="PRINT"
+        android:textSize="18sp"
+        android:layout_gravity="end"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        layout="@layout/content_transaction_details"/>
+
+    <Button
+        android:id="@+id/finish_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="4dp"
+        android:text="FINISH"
+        android:textColor="@color/white"
+        android:background="#30a9ac"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat = "@drawable/ic_refund_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="end|bottom"
+        app:fabSize="normal"
+        android:visibility="gone"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="@dimen/medium_padding"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

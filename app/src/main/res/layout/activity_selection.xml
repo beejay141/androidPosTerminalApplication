@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iisysgroup.androidlite.VasActivity"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/reportActivityTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gtColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppThemealt.PopupOverlay"
+            app:title="VAS" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/backimgb"
+            android:visibility="gone"
+            android:scaleType="centerCrop" />
+    </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/airtime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Airtime"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:textSize="24dp"
+            android:textColor="@color/gtColor"
+            android:background="@color/recyclerview_light"
+            android:drawableLeft="@drawable/ic_leak_add"
+            android:drawablePadding="10dp"
+            android:paddingEnd="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Data"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:textSize="24dp"
+            android:textColor="@color/gtColor"
+            android:drawableLeft="@drawable/ic_android_wifi"
+            android:drawablePadding="10dp"
+            android:background="@color/recyclerview_dark"
+            android:paddingEnd="30dp"/>
+        </LinearLayout>
+
+</LinearLayout>

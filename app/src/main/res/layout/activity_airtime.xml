@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iisysgroup.androidlite.vas.airtime_and_data.AirtimeActivity">
+
+    <View
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+    <include
+        android:id="@+id/enter_phone_number_or_amount"
+        layout="@layout/enter_amount"
+        android:visibility="gone"
+        />
+
+
+    <include
+        android:id="@+id/airtime_provider_select"
+        layout="@layout/airtime_provider_select"
+        android:visibility="visible"/>
+
+</android.support.constraint.ConstraintLayout>

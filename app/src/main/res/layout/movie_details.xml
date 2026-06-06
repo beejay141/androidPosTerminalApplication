@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/ic_genesis"
+                android:scaleType="fitCenter"
+                android:id="@+id/d_movieimg"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Movie Name"
+                android:gravity="center"
+                android:id="@+id/d_name"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="May 17, 1992"
+                android:gravity="center"
+                android:id="@+id/d_movieTime"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Genre: "
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Genre"
+                    android:id="@+id/d_genre"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Duration: "
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="100 min"
+                    android:id="@+id/d_duration"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Synopsis"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/d_synopsis"
+                    android:text="Baby Mamas is a comedy drama revolving around the daily lives and loves of four professional women who are all in different stages of their own real-life baby mama drama. We meet TOLI, ..."
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <!--Beginning of other movie categories-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/other_movies"
+                android:paddingLeft="15dp"
+                android:visibility="visible"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="4"
+                        android:text="Regular"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="₦ "
+                        android:id="@+id/d_regularPrice"
+                        android:textSize="12sp"
+                        android:layout_weight="5" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/d_radio_regular"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="4"
+                        android:text="Premium"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:text="₦ "
+                        android:id="@+id/d_premiumPrice"
+                        android:textSize="12sp"
+                        android:layout_weight="5" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/d_radio_premium"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="4"
+                        android:text="Combo"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="₦ "
+                        android:id="@+id/d_comboPrice"
+                        android:textSize="12sp"
+                        android:layout_weight="5" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/d_radio_combo"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="4"
+                        android:text="VIP"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="₦ "
+                        android:id="@+id/d_vipPrice"
+                        android:textSize="12sp"
+                        android:layout_weight="5" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/d_radio_vip"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--End of usual movies-->
+
+            <!--Beginning 3D movie categories-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/_3d_movies"
+                android:paddingLeft="15dp"
+                android:visibility="gone"
+                android:gravity="center"
+
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="5"
+                        android:text="3D with Glasses "
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="₦ "
+                        android:id="@+id/_3d_with_glasses_price"
+                        android:textSize="12sp"
+                        android:layout_weight="4" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/_3d_with_glasses_radio"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="5"
+                        android:text="3D without Glasses"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:text="₦ "
+                        android:id="@+id/_3d_without_glasses_price"
+                        android:textSize="12sp"
+                        android:layout_weight="4" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/_3d_without_glasses_radio"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--End of 3D  movies-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="Close"
+                    android:background="@color/maindashboard"
+                    android:id="@+id/d_btn_close"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:background="@color/gtColor"
+                    android:textColor="@color/white"
+                    android:text="Buy Ticket"
+                    android:id="@+id/d_btn_buy"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</android.support.v4.widget.NestedScrollView>

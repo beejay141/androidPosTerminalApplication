@@ -1,0 +1,58 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:inputType="textCapWords"
+        android:key="@string/key_terminal_id"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:defaultValue="2033GP23"
+        android:title="@string/pref_title_terminal_id" />
+
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:inputType="textCapWords"
+        android:key="@string/key_pref_ip_address"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_ip_address"
+        android:defaultValue="196.6.103.73"/>
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:inputType="textCapWords"
+        android:key="@string/key_pref_port"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_port"
+        android:defaultValue="5043"/>
+
+    <ListPreference
+        android:entries="@array/list_preference_host_type_entries"
+        android:entryValues="@array/list_preference_host_type_entry_values"
+        android:key="@string/key_host_type"
+        android:title="Host Type"
+        android:defaultValue="EPMS"
+        />
+
+    <ListPreference
+        android:entries="@array/list_preference_port_type_entries"
+        android:entryValues="@array/list_preference_port_type_entry_values"
+        android:key="@string/key_pref_port_type"
+        android:title="Port Type"
+        android:defaultValue="SSL"/>
+
+    <ListPreference
+        android:entries="@array/list_preference_platform_entries"
+        android:entryValues="@array/list_preference_platform_values"
+        android:key="@string/key_platform"
+        android:title="Port Type"
+        android:defaultValue="Live"/>
+
+
+
+</PreferenceScreen>

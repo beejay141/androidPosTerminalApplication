@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp">
+
+    <include
+        android:id="@+id/transaction_details"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        layout = "@layout/content_transaction_details"/>
+     <!--Todo make here visible after customisazion -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/reversal"
+            android:text="Reverse"
+            style="@style/refund_and_reversal"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/refund"
+            android:text="Refund"
+            style="@style/refund_and_reversal"
+            android:background="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+</LinearLayout>

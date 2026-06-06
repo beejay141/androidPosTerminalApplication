@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="Embedded JDK" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PaxModule" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bluetoothprinterlib" />
+            <option value="$PROJECT_DIR$/bluetoothprintersf5804-debug" />
+            <option value="$PROJECT_DIR$/loginhelpermodule" />
+            <option value="$PROJECT_DIR$/loginhelpermodule-debug" />
+            <option value="$PROJECT_DIR$/loginhelpermodule-release" />
+            <option value="$PROJECT_DIR$/payviceconnect-debug" />
+            <option value="$PROJECT_DIR$/poslib-commons" />
+            <option value="$PROJECT_DIR$/poslib-device" />
+            <option value="$PROJECT_DIR$/poslib-host-debug" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

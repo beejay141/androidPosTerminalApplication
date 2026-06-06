@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/purchase_account_select"
+        android:visibility="gone"
+        layout="@layout/account_select"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+    <include
+        layout="@layout/enter_amount"
+        android:id="@+id/enter_amount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</FrameLayout>

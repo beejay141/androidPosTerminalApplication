@@ -1,0 +1,1 @@
+include ':app', ':poslib-device', ':poslib-commons', ':payviceconnect-debug', ':poslib-host-debug', ':PaxModule'

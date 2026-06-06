@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="oldcolorPrimary">#2ab88b</color>
+    <color name="oldcolorPrimaryDark">#2ab88b</color>
+    <color name="oldcolorAccent">#e24301</color>
+
+    <color name="colorPrimary">#4dd0e1</color>
+    <color name="colorPrimaryDark">#009faf</color>
+    <color name="colorAccent">#cc37474f</color>
+
+    <!--<color name="colorPrimary">#ee6901</color>-->
+    <!--<color name="colorPrimaryDark">#FFB71C1C</color>-->
+    <!--<color name="colorAccent">#e24301</color>-->
+
+    <color name="grey">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="menuViewColor">#37474f</color>
+    <color name="period">#c2ebe3</color>
+    <color name="maindashboard">#848484</color>
+    <color name="paymentBackground">#f5f9fc</color>
+    <color name="history">#e7f5f5</color>
+    <color name="terminalMgt">#daeeec</color>
+    <color name="settings">#d0ebe6</color>
+
+    <color name="colorGreen">#4dd0e1</color>
+    <color name="coloralt">#4dd0e1</color>
+    <color name="txtprimary">#37474f</color>
+
+    <color name="gtColor">#4dd0e1</color>
+
+    <color name="txtprimaryb">#37474f</color>
+
+    <color name = "recyclerview_light">#ffffff</color>
+    <color name="recyclerview_dark">#ffffff</color>
+    <color name="red">#37474f</color>
+    <color name="black">#000000</color>
+    <color name="white_pale">#E3F2FC</color>
+</resources>
+

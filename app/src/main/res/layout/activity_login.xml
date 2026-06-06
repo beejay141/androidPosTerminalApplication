@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/loginview"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/materialup.profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logoicon"
+        android:padding="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_anchor="@id/loginview"
+        app:layout_scrollFlags="scroll"
+        app:layout_anchorGravity="top|center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_light"
+        android:gravity="center"
+        android:text="@string/app_name_alt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/txtprimaryb"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center"
+        android:text="@string/app_login_txt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/gtColor"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:theme="@style/EditTextTheme"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/gtColor"
+            android:drawableTint="@color/gtColor"
+            android:inputType= "textEmailAddress"
+            android:fontFamily="@font/lato"
+            android:hint="Username"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/cardview_dark_background" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:theme="@style/EditTextTheme"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/cardview_dark_background"
+            android:theme="@style/EditTextTheme"
+            android:drawableTint="@color/gtColor"
+            android:backgroundTint="@color/gtColor"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/loginaltbtn"
+        android:text="SIGN IN"
+        android:textAllCaps="false"
+        android:background="@color/gtColor"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:padding="18dp"
+        android:fontFamily="@font/lato_black"
+        android:layout_marginTop="40dp"
+        android:onClick="OpenMenu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        />
+</LinearLayout>
+

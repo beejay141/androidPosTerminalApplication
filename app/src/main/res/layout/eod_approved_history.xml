@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/approved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transactionReport">
+
+        <LinearLayout
+            android:id="@+id/approvedCountandValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <TextView
+                android:id="@+id/approvedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approved Count"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/approvedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/approvedTotalandValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@id/approvedCountandValue">
+
+            <TextView
+                android:id="@+id/approvedTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approved Total"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/approvedValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₦ 0.00"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/approvedTotalandValue"
+            android:text="APPROVED PURCHASE"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:id="@+id/timeRRNAndAmountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_below="@id/date">
+
+            <TextView
+                android:id="@+id/timeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIME"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/RRNTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RRN"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/amountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMOUNT"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/transactionHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeRRNAndAmountTitle"
+            android:layout_marginTop="8dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

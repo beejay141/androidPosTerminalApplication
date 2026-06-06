@@ -1,0 +1,589 @@
+Index: app/src/main/java/com/iisysgroup/androidlite/PaymentsActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/iisysgroup/androidlite/PaymentsActivity.java	(revision 93fe2a0d7813c7cf5d85f379e205ecf9fdcbdfcc)
++++ app/src/main/java/com/iisysgroup/androidlite/PaymentsActivity.java	(revision e3b71b3acda63b7ba0330f6167df979c6871ec90)
+@@ -13,6 +13,7 @@
+ import android.view.MenuItem;
+ import android.view.View;
+ import android.view.ViewGroup;
++import android.widget.ImageView;
+ import android.widget.TextView;
+ import android.support.v7.widget.Toolbar;
+ import android.widget.Toast;
+@@ -98,17 +99,38 @@
+             //String text = names[position];
+ 
+             switch (position){
+-
+-                case 1: holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                case 0:
++                    holder.imageView.setImageResource(R.drawable.ic_credit_card);
+                     break;
+-                case 2: holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                case 1:
++                    holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                    holder.imageView.setImageResource(R.drawable.ic_file_text_o);
++
+                     break;
+-                case 5: holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                case 2:
++                    holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                    holder.imageView.setImageResource(R.drawable.ic_android_open);
+                     break;
+-                case 6: holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++
++                case 3:
++                    holder.imageView.setImageResource(R.drawable.ic_arrow_return_left);
+                     break;
+-                default:holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_light));
+ 
++                case 4:
++                    holder.imageView.setImageResource(R.drawable.ic_ios_loop_strong);
++                    break;
++                case 5:
++                    holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                    holder.imageView.setImageResource(R.drawable.ic_ios_undo);
++                    break;
++                case 6:
++                    holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_dark));
++                    holder.imageView.setImageResource(R.drawable.ic_android_star_half);
++                    break;
++
++                default:
++                    holder.constraintLayout.setBackgroundColor(getResources().getColor(R.color.recyclerview_light));
++                    holder.imageView.setImageResource(R.drawable.ic_arrow_swap);
+             }
+ 
+ 
+@@ -126,12 +148,14 @@
+     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+     {
+         TextView textView;
++        ImageView imageView;
+         ConstraintLayout constraintLayout;
+ 
+-        public MyViewHolder(View viewThatIsPassed) {
+-            super(viewThatIsPassed);
+-            viewThatIsPassed.setOnClickListener(this);
++        public MyViewHolder(View itemView) {
++            super(itemView);
++            itemView.setOnClickListener(this);
+             textView = itemView.findViewById(R.id.text);
++            imageView = itemView.findViewById(R.id.imageView);
+             constraintLayout = itemView.findViewById(R.id.constraint);
+         }
+ 
+Index: app/src/main/res/layout/activity_term_magm.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_term_magm.xml	(revision 93fe2a0d7813c7cf5d85f379e205ecf9fdcbdfcc)
++++ app/src/main/res/layout/activity_term_magm.xml	(revision e3b71b3acda63b7ba0330f6167df979c6871ec90)
+@@ -53,7 +53,7 @@
+                         android:gravity="center_vertical"
+                         android:paddingStart="30dp"
+                         android:textSize="24dp"
+-                        android:textColor="@color/menuViewColor"
++                        android:textColor="#299A8E"
+                         android:background="@color/recyclerview_light"
+                         android:paddingEnd="30dp"
+                         android:drawableRight="@drawable/ic_angle_right"/>
+@@ -68,7 +68,7 @@
+                         android:gravity="center_vertical"
+                         android:paddingStart="30dp"
+                         android:textSize="24dp"
+-                        android:textColor="@color/menuViewColor"
++                        android:textColor="#299A8E"
+                         android:background="@color/recyclerview_dark"
+                         android:paddingEnd="30dp"
+                         android:drawableRight="@drawable/ic_angle_right"/>
+diff --git app/src/main/res/drawable-hdpi/ic_500px.png app/src/main/res/drawable-hdpi/ic_500px.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b0992f391bc3f4c4d32e61a39df888c39d53773
+GIT binary patch
+literal 784
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_android_open.png app/src/main/res/drawable-hdpi/ic_android_open.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..c505bee96fd1fa284905aa5430ffc10c027ec1ec
+GIT binary patch
+literal 648
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_android_star_half.png app/src/main/res/drawable-hdpi/ic_android_star_half.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..87007eee52085bca4e9379ee43a610975aa1b49f
+GIT binary patch
+literal 1279
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_angle_right.png app/src/main/res/drawable-hdpi/ic_angle_right.png
+index 0f3c63f44998c6867c63514be019a776e4f44f32..fa5347f6d8e724c3dbf1a8a31060ae3b6c02da57
+GIT binary patch
+literal 226
+zc%17D@N?(olHy`uVBq!ia0vp^9w5xY1|&n@ZgvM!ZJsWUAr-gY-rUI9U?AXd@ysiZ
+zR}6k>Y&#ZC5it|$QxH>nf6(!j|2j`EMg|aAkla_Bwb<pjRB7}gx!hZk6K|j0`KZH0
+z!edFwQ5PXkm5B(#PUK{8r$d;JOyLnhcNkIG+kcq7@rY-b&zvV}m7Bn3{(H$X_q?0z
+SeYZb+Ag-sYpUXO@geCythe6-~
+
+diff --git app/src/main/res/drawable-hdpi/ic_arrow_return_left.png app/src/main/res/drawable-hdpi/ic_arrow_return_left.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..565c0d3d61eaa47d1287d4de68522ffc79baf29a
+GIT binary patch
+literal 308
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_arrow_swap.png app/src/main/res/drawable-hdpi/ic_arrow_swap.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4fc193aab67d261a73b9196a0a52489e82f60282
+GIT binary patch
+literal 293
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_credit_card.png app/src/main/res/drawable-hdpi/ic_credit_card.png
+index 8b2eeeaa76ab6ee18135c7a9750535afc67f9834..6fd78e854365120d3f713f8fc0e44f3863facb7c
+GIT binary patch
+literal 306
+zc%17D@N?(olHy`uVBq!ia0vp^9w5xY1|&n@ZgvM!pFLe1Ln>~)y&cHaWWdmn$bU_A
+z)$S1U6YH+N3El0xZ~E%EE{-`an`-Ufgx+YM%@Y&qIZ4HHQrh)p*6X&#7T+p+Xw;Lf
+z_IT54r_I^3pQ_Axs95TzG2dPKTc^eG(r*^$Cw@`0ogOObaJa~uf$Q(-=5vV?Pw$g@
+z{%N23Qii=6&%b?~X=Cruz`)4Fq9MQF4!Z(`%^?6{oE1EgC@O#~^pD@<+lTL;4=V%N
+zT}+!inVC#PPvjrC-+1chM4NM^CIOz|f{$9~9x1&g!?mL=z&~nzzxm63cYgIG{IXbX
+gvE2*gbd%kAg*+(_u1x!X5a@jdPgg&ebxsLQ03wNdZvX%Q
+
+diff --git app/src/main/res/drawable-hdpi/ic_file_text_o.png app/src/main/res/drawable-hdpi/ic_file_text_o.png
+index 8acfe5959f1000e634fb2bb0ea7a8d7d5e0d6b96..9e96b9077f23e3fba24fcaa972cbd17c329c4fc5
+GIT binary patch
+literal 406
+zc$@)`0dW3_P)<h;3K|Lk000e1NJLTq002k;002k`1^@s6RqeA!00042Nkl<Zc-rmT
+zF$%&k7>40at{%tJcnMR`O=rD{R}dN(5lmOlU?&kgfTq@=h!oK_ehu#jKTfvck^D`f
+zCJ7;g5JCv~D2wBIU|hB|&YpbT0@ua3?at)ZO!Li95-82>>JKpQ>g=(`azK7yg$U52
+zCeF^)fNpA)I=hes3jTrQcIIENvPl01s`_9ysv5Q+k^+!4k_wP4k`j<4k{Xa4k|K~4
+zk}6OWQqaYuGEfszux*JtPy^CA$Og9$KsBW6%PQOeRDW-^EvZklUHp5oAJ3Cw1Zwqo
+zB|4zC59p!;Dvx-dNCiMKj29q)0Ft_)IoN$?2loEj{Ris!8x4S>2V#oRqyYj5AeuCf
+zdDcO!gP3A8X@CF%h$hWro^=rGAf^~i8X$lG0tg_00E!=|ZxsTl=rPc#b0DEV^?p&=
+tvU8xee=``UigL{5*b_nsA%qa}QSPj1S(6r0nhpQ}002ovPDHLkV1m)ZrYZmc
+
+diff --git app/src/main/res/drawable-hdpi/ic_ios_loop_strong.png app/src/main/res/drawable-hdpi/ic_ios_loop_strong.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..872a19090d6ca4ebe6457ce8323963b5ca7f4af0
+GIT binary patch
+literal 1524
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-hdpi/ic_ios_undo.png app/src/main/res/drawable-hdpi/ic_ios_undo.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..56dbc041db3deeec127fa50db917d94256ffd3be
+GIT binary patch
+literal 874
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_500px.png app/src/main/res/drawable-mdpi/ic_500px.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..7485cf9e4cc504f6888c34a945b8199843088a00
+GIT binary patch
+literal 456
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_android_open.png app/src/main/res/drawable-mdpi/ic_android_open.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa4fb0668a203b0d39196e39e2132aa6fd1cd44d
+GIT binary patch
+literal 427
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_android_star_half.png app/src/main/res/drawable-mdpi/ic_android_star_half.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..bea60878ad3d6248d182d3ee4dc546d28b485ec9
+GIT binary patch
+literal 902
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_angle_right.png app/src/main/res/drawable-mdpi/ic_angle_right.png
+index af5a9b94377b53333ae623a249a8922f493c4d2d..7010104536519e33ec9c1c908bd9e675020b3f49
+GIT binary patch
+literal 223
+zc%17D@N?(olHy`uVBq!ia0vp^1|ZDA1|-9oezpUtm7Xq+Ar-gY-f-k<au8`RydA#1
+zlkY-q6UUs4yQYh(w|v<-!{^!7w{rIqW_5BD&;Ro1_rZpD|KyvRTp5A7Z-_sBQmJ!m
+z%k#>WkLF&RUX!b*z-w<c^@r8kogCt?T&3>qRc?wo>-r||>Ld=OeWD95{c$~V@3*Aj
+zeu0hqPG7lE?&P<(A)+lS^*QGXnO~1T+dh^&UvbR1?#I0Qvt;dg49x#2E6M)L16tJc
+ZoN<D*+B~6cmz04#22WQ%mvv4FO#o5eVA}uy
+
+diff --git app/src/main/res/drawable-mdpi/ic_arrow_return_left.png app/src/main/res/drawable-mdpi/ic_arrow_return_left.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..f0151c54f7391765d692f26ccb5cac368e837e67
+GIT binary patch
+literal 245
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_arrow_swap.png app/src/main/res/drawable-mdpi/ic_arrow_swap.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..33a12b238791546364326100126b24866fcb7dc9
+GIT binary patch
+literal 232
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_credit_card.png app/src/main/res/drawable-mdpi/ic_credit_card.png
+index 515fa64d0cee5bcef11e972d387ee72c244f0573..83ed43d2ad10d0683e6d1877df2b7def35887e0e
+GIT binary patch
+literal 278
+zc$@(m0p<RQP)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0002tNkl<Zc-rlm
+zO%8%E5JvHOp1_qM#uEVNqpTU$+O<E&AlM=xA*fXoT9fyZ37Zn;W!g0Ph#~+0fC)*d
+z;!M;bm7-2XHGZq8Z7+%BTes#V-}!HPzMLe?!sE#PYM$C_RqE3BV<+Jt&}|#@V$?J%
+z@B7*G@Q^5KmkIPE)1jQnZW?W02q3VaK#+w10tg_0z+wX2#0VgO00IcKWTG~&E|s4z
+z9|YbAB$BV^GMmW<o)%}|Gl3xwJq6MI7r~YuP2v21(PE|c!G^n~irx0yT|$QvuiL=c
+grsn+k004j~H==eYyvyAui2wiq07*qoM6N<$f(V*>U;qFB
+
+diff --git app/src/main/res/drawable-mdpi/ic_file_text_o.png app/src/main/res/drawable-mdpi/ic_file_text_o.png
+index 591b49ffea0b11f1fa06a04350e744262a3fb3d0..65a1f9de94f5af3cdec13a6c49140f04944962fa
+GIT binary patch
+literal 432
+zc$@*U0ZsmiP)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0004bNkl<Zc-rlm
+zO-jTt6vw*~ynu>dAP9nj9>GKC6<oNIwy|#A&rRG9sI5(AQ#ws%RJ2+g2L?d|Z=f4Z
+ziq-7Kwi72A-ya@L)9}(?nwOUn%L0KwlP#wmZn+fu+_F&^qWI2D@F_~j-f?;|r5wOz
+zB;_4{D6$(TX)UP*Q1|kMJ$f--{0o4rrk~xy7h<@<uRY0k&yFq@i~$g3G3qWQ{qH)4
+zAH44QyfFZx?uhxzygZQmI85-IF#tlS-CE)IPtvpdgE*Kq20+N};8i}Io`0qjNzwJ$
+zj4=R09u3!c{fpG*(vG5OV*v6taj?!4-D}a#VWDFbKt7$4a9diLuCxJgXt+}$$-Qd>
+zz(;nYN~YEZApZ)C>~lZe;hR44rX@g$J~IILEdZjVS^eLDG{+85cRQ^CfV875ZKMw|
+z06`2v3_%P*3;+-V|9TZNJ`X?;0{{S+127h=51{slX_(#C2KYMU3r2OwSHgVM2{tVd
+c2sGLH1oR20Zg13g?f?J)07*qoM6N<$f~Q@&6#xJL
+
+diff --git app/src/main/res/drawable-mdpi/ic_ios_loop_strong.png app/src/main/res/drawable-mdpi/ic_ios_loop_strong.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..b3bc7f737559b137253a455924700d7422ed9cf5
+GIT binary patch
+literal 1091
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-mdpi/ic_ios_undo.png app/src/main/res/drawable-mdpi/ic_ios_undo.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..8d9ad3278d5013c4761185217e4bebe042efcd72
+GIT binary patch
+literal 622
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_500px.png app/src/main/res/drawable-xhdpi/ic_500px.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..9b5205dc809fe37c4627d1da737aa07d265ac640
+GIT binary patch
+literal 1026
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_alert.png app/src/main/res/drawable-xhdpi/ic_alert.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..e6ac9199c7a9f1609400c8f24d049e4d62321f10
+GIT binary patch
+literal 294
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_android_open.png app/src/main/res/drawable-xhdpi/ic_android_open.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..38f2daf47a24b11d814f05faf5f70a01ce35a82c
+GIT binary patch
+literal 794
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_android_star_half.png app/src/main/res/drawable-xhdpi/ic_android_star_half.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..d4cf4092980798983de70ea1a113f96a9722f62d
+GIT binary patch
+literal 1714
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_angle_right.png app/src/main/res/drawable-xhdpi/ic_angle_right.png
+index 9b9c2d98942d9c5c5f976f8e9113e1c0a4c9a09a..6de88793066111772c7f575072b5915fe92abce4
+GIT binary patch
+literal 285
+zc%17D@N?(olHy`uVBq!ia0vp^2_VeD1|%QND7Ro>U=;RraSW-r_4c-57Ly}G+r?aG
+zuKtI-LblD<H}Iz&-Li99$GI>e<Jn5(9y67mG3`=T5=(l1PHhi6Gk4j2{=-T+feZ-n
+z|9Z;aectY!Jj=em+Sv2ZdhVAs9<x81U)|7ibzA3t>v{6ZTT;Zr|Em3XA6cWkW#yW~
+zKb(Mc+25LT?`L1gcRTT7Y225d3qJ){trhG^U{NkfX?fmn5O9ja&7cV^Ao1`^*RGXq
+zUXlmFLYFuu@2ClQbxrxo!`G+cZ*ot~%aA(!dg_nepKNVbPSLFU6|4I3sC&&v!T6dZ
+z;_@(N*Wu%p${($*8h%KwSNLe$r%-q7wT7%J%nuFwGx$&J6sexL#D5ov@9FC2vd$@?
+F2>>Fji>?3w
+
+diff --git app/src/main/res/drawable-xhdpi/ic_arrow_return_left.png app/src/main/res/drawable-xhdpi/ic_arrow_return_left.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..19d767bef139b494f93822e42bc63d3ee2706aaf
+GIT binary patch
+literal 361
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_arrow_swap.png app/src/main/res/drawable-xhdpi/ic_arrow_swap.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..565bc642a79eee5a646534ed76bea7bee4add17f
+GIT binary patch
+literal 355
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_credit_card.png app/src/main/res/drawable-xhdpi/ic_credit_card.png
+index 46d3c3773fc54c1af62e18d45682dac0fa916c9a..49929f24d2fe6bb823968251534de5fb4d6bd630
+GIT binary patch
+literal 495
+zc%17D@N?(olHy`uVBq!ia0vp^2_VeD1|%QND7Ro>VBGEL;uunK>+Ky!ufq-^?S*^$
+zL(1cpREyd;3X40j`d`}hML>1(THh+xwQ|lEtX9T`^xiPzRQhLEQ8HERUwqoLgHyI|
+zXJ>$d4Q^Jmzf4k+R&||mysB?&!0D>G^D5FyT`gXy{8_?tc*%+QmcPMI^<SFo&oTYu
+zI5VEJY<HILp$B@_U!J|+A$03T-=k~BV$ar1?VYv0L8*St&ri!Wp4rrW3w^=A?4ilC
+zj{%b}@A=8K;$_*Re`U+m|9n{#CX}^nu^G!1-SzuU?0<4){pl_SCJu!LII%#NG3&5W
+z1F9er(O|E0ptVQZkja685hx@8q*#!M5B{t<g@J{)Km5$ovxn+=z|VanW1nAC+Hv1`
+z|JQ9<cq;&8Pbp)(+qBTfJ6--wJm)s8)_BYNy06V`-$Fy%CTmU3Yy0MVxc7g>zehJt
+zb!S?1#edT}Bg?k^oZ8;7Z`-$UTxYtw>6Agv`<6(ZZ{b2~T6pjM$+}jiuKu^kx-0$A
+ts|2%sb!%@&rUkVXnr27)bHKv-S|zhjoP__jF26S*uBWS?%Q~loCIDs;%zFR;
+
+diff --git app/src/main/res/drawable-xhdpi/ic_file_text_o.png app/src/main/res/drawable-xhdpi/ic_file_text_o.png
+index 64166361d61e26dd342141346a91ac011bdbb83b..b77d44e211663c7ab9935cfb25ed97e756706d33
+GIT binary patch
+literal 718
+zc%17D@N?(olHy`uVBq!ia0vp^2_VeD1|%QND7Ro>U|Q(u;uunK>+N0JY!OG9;~#}}
+zbgsIw#J6ND7TacKcB(V!F>{2}<h#8Q5l>h-_Oa%&96aT9<hG=U%FMZkkC+K+OK%KX
+zR8SC^-q*08TIJa$>)-SL{!8GP&b{6Ew`HDOncnT!f=(QYEdoFyg@5M%1$@g7|8a_1
+zQFq(RC`4Sm*J|gID+@LJ>(V~&TykOdx{ax)PxoJW^?aq|oc`xe#9z&75RMOxyB{B>
+zeuQ~RYn(7wz%KLi;om=&xLGtvd9vQnyT4hqHq6LD(s5$9!BWS+2mW5_-v9au8>jR4
+z&#5IGK@5N1tDTpuJ#Krii_KB0!9VE9_Qj49I0QtSLK^Hjs&u3rjSiH}FYq>LDq;A@
+zVaU+o*1?)^NnN5eSjNeRK}j%)`3CQyMY4047PvLY3a<IJ=fl6NfecwJGq#*vC4E_7
+zl9Mglg0u!%fx5fVb;Udlvl!LZr+?o0s$Z#Ayn&6ODz);!-ebq?-<ni09MEHYrTL4S
+zVQT5A`KBeRx!et}`aUNHPd8><(IG!~hgA);LdxE@pD$1K2{%03wB*XcBRuDps_nP=
+zEatvgj!|IS+*$@O_$GdUUlQo)l`r4({7C+HJ}GJo!@K<J%<nj3*%dw<i(z2k;5GPq
+zD_eN=%*W@LQ(Eh!*c|)+Zj@{@;$elD&|tvu`P<u%M_y_F<G$}JR_{}v^Ng|epGbky
+zHbw^HM23j21kFXWy#-eW`b!|`de_^uL*cMZ!%PDP1{U^&<S-A0ZEA371ZcR)Xcc^m
+z!Qhp_ffcL_Mfs16i#KMOS~#SAejUr|(X;E;Bt9?w9bA9koaxm6vh2Tq*IFr6n;$>k
+tc|_-@?pS|x>&5%qHo8MoOv?n@C+4d~)4p!f7XA-1+|$+1Wt~$(698ajDFXli
+
+diff --git app/src/main/res/drawable-xhdpi/ic_ios_loop_strong.png app/src/main/res/drawable-xhdpi/ic_ios_loop_strong.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..a100929a29ae8bf7e905d5c55a5de4fef487aa1c
+GIT binary patch
+literal 2049
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xhdpi/ic_ios_undo.png app/src/main/res/drawable-xhdpi/ic_ios_undo.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4a2fd096d072075776f1195ada909a20ae983e70
+GIT binary patch
+literal 1165
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_500px.png app/src/main/res/drawable-xxhdpi/ic_500px.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..a02a583e844a004be4cd927b515c659d6c888f3e
+GIT binary patch
+literal 1561
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_alert.png app/src/main/res/drawable-xxhdpi/ic_alert.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..bf5374f94b586850f3dde8214e3542b418126c1f
+GIT binary patch
+literal 420
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_android_open.png app/src/main/res/drawable-xxhdpi/ic_android_open.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..08457cc56c8f7fd1159b4ce0cfa6053abb8c55f8
+GIT binary patch
+literal 895
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_android_star_half.png app/src/main/res/drawable-xxhdpi/ic_android_star_half.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..5573c0398e8f9ae0747d377b9d8b434a228c55e0
+GIT binary patch
+literal 2079
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_angle_right.png app/src/main/res/drawable-xxhdpi/ic_angle_right.png
+index 748671d3df4c956fce8fe927f1fc9dd6108277f0..0244340ef0444b75d567fbb78d95c1cad3413b5a
+GIT binary patch
+literal 329
+zc%17D@N?(olHy`uVBq!ia0vp^6F``Q4M;wBd$farfziR!#WAGf*4w+bd<P3;jz5$;
+z@PNT>ar8}{IIXZ|W{XStQ_Yf!#F`t+6pwiSPJdK6>HnpVv;AjDt%?L0f)&)9O%cC)
+z(avhxf~|Wx3geD#v}&)Ebnd=jHt+J;mFptgwp6$rIsUPuBYfHI7yEnNU2KAFHTb32
+zRg~mrPTeRbsO03*!6DemA*iV2!UEwmb_jrk6_i|BfUFLP)Jj2Jvx}Rh#Cz}U-9In+
+z?|+vtWz~7XrQ4&TdaqPm3v;&VVE?EfcSKq4NOOe%|06~a2gvFNaU4OC5c$LM8DGza
+zd@NXh);##=VQ1favEuwE1v}fHbR2Q6a&cXw<8-OH^zZ94LfE{z|0NIO^ckj}b!E07
+NuBWS?%Q~loCIE_jgxvrD
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_arrow_return_left.png app/src/main/res/drawable-xxhdpi/ic_arrow_return_left.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..9fdae04f848a2bed39d215d91b43740b9b5f7081
+GIT binary patch
+literal 633
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_arrow_swap.png app/src/main/res/drawable-xxhdpi/ic_arrow_swap.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..06146879f7c29ba470ae795d79bf58bdf5140a5a
+GIT binary patch
+literal 454
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_credit_card.png app/src/main/res/drawable-xxhdpi/ic_credit_card.png
+index 84ca93d453aca0b3c3aaea80581c04d85ed43105..40716bf472fe02f9bc5700f7a7dcf3e5d7ccef66
+GIT binary patch
+literal 698
+zc%17D@N?(olHy`uVBq!ia0vp^6F``Q4M;wBd$farfvLjN#WAGf*4sO4{bT|q8WLHU
+zI^VE{gcNapoyx&7y+Pw{WKg%eg7(A?u6GIcjTuJ9ER7M78-+R@Lbjyu+Qd28Wadoc
+z^!e&PHx;Qr-*YB@)0?-93`k%@v7R!YSm~S)-#g19!*l=m%-`?pw)yVl<zFf{=Y-F{
+zH1BP?;Q2+7vdfuo-&k_<Y}L&p$2}iMZYxYxPP5&=%F52a<XLC7bij!o*}z|ig1O_b
+z&CJ+x`sUAMnPvJl+g?1qE8JU@JXbF^U2ON6m-EiG?XNKv6x)5n{qJl;rmB~g6Lyy<
+z$nTLoecDylJv0AZ^|yDKJq`EP?AYzTDK^sm%d^wRPBL%ut(;x+pG8H1k<-J0g9Ah|
+z2~B7a5CD-NVMPU&mWF?i8P4o+cW?tkkW3F4g5)Kkkn;ow1bRS~!4#f($NFS>bzOu8
+z&<YNaaVp3Rpmk0T91u%^770KsMaXw-Vv_pRp1=A3!?_JG4N#XsnBtu%uKtw{4Dp=c
+zdHZaR{GRvsc8}nN?DLK_!hv<?<R2TnJsW%e-r9El6@Bvm6w5ajTUR)oHrp5V!YDoP
+z_{j&1u~$Co)!yu8)z33qe77njH$-gDhRyz)t>k_ee%RfrpL{9z<kc7DUtgAN*Iy)b
+z&Zf}zZTHHzPtVw1{PWDxHgJC0$G(NTH~#xwvaR+={Z`AHe&5^WUal#=wpaX984q%*
+bNcjGTab9lO9!-7!O(4FftDnm{r-UW|I!X|@
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_file_text_o.png app/src/main/res/drawable-xxhdpi/ic_file_text_o.png
+index 6903a3d3df6b1190d220d4b9e2e5964e48c85538..6bd14ce0133939d846f4e7fb4a89c901d2bd97d1
+GIT binary patch
+literal 873
+zc%17D@N?(olHy`uVBq!ia0vp^6F``Q4M;wBd$farfmzbi#WAGf*4w*^MYjV)S`!a9
+zI5amk9Xg=5V1c#93#LQC6Z+mxQ?ovy#I?6Q=0%_Cvy&1mA|e%xjErn+ZA@Qn30o>2
+ze(Ci0^LHebQ_p?Ox12VAp1U#wGRQbldgNq@<n*gL%TjA*i+xmn{c~!esrDo9uRr$8
+zGUSf>lqsoSmYSx2_F?6kw7Albvjll}?C8F{YR6aO>CeB<tdBXOUG|50veG(^&&Mlg
+zh;Dx`5p;O-kNV|*b5@JrV4o%<)S>b<xOPVZSEGlEf)KCYf;aIByI;qtC<S=!ixkXX
+zef&F+`MTzJ_sVP`!4;);LV_BW@|_%0=JdO;c%5@sVp4ssEZ8{d^TZB^lRrIN7Cfl|
+zsxQK(EL$sZ+UaD@DQ?c4+ivP!Q4g@<RjoSlYMLUGEibR?EMbp*DxI5lGEZ~x_h#;V
+z#xm*s1efnyzdw4uVIgy4-{HE2b$9s`p96*8*YAEdZQ<Q(Ml4bl`})#d6_`|Wi$ElA
+z<FEPo&I(Lh(}IrhHga6Ci<f+CH@}s`gs1b|FD=1Fwi2~l`{(9zxG4PP@=#!M+|P1p
+zeZw!&2@Xt64lI}Q&olXT-TvOY?ZVshYnG?(Q4BcF_<jFj(<^shUT1j~x4`lL9>zwX
+zUM9f~2NtD((~tAp|C~O@@+xY<UH?x0;6=yps&X*xoUkIE@vF8%BL~Z0A&>n`ufiRe
+z1UY`mM)IfF2ApS(;&)lFSnmGxl`KjE5VJIb8`rQa1swXgmR(8Ui#O0^Km#~k6kbes
+z_$3;!pGm00p)>-h>&oM3Ao*C9M7;_EjbF4E)Um2eXn->V<QRSTPd@{cWieX&yqb?G
+z*Jh&ZStGG#@r<A&z3Q8d8}-`j*|d`1=v+CuW}UL%rynaKk4bj^d%ui#{{Ca9_pA#K
+yNniB$w&cXVip5D+KVCf=J7<>@8*-XmplQ#zG)vg7jdedii0|p@=d#Wzp$P!OKU~HD
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_ios_loop_strong.png app/src/main/res/drawable-xxhdpi/ic_ios_loop_strong.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..e7bb36fb4ecea7207397d1a614cd60a4e2aded02
+GIT binary patch
+literal 2401
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxhdpi/ic_ios_undo.png app/src/main/res/drawable-xxhdpi/ic_ios_undo.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..a7b895defa71c6f2cb7fd56850b9018e87743293
+GIT binary patch
+literal 1277
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_500px.png app/src/main/res/drawable-xxxhdpi/ic_500px.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..216e738047f31286119492d1d91d3a049126371f
+GIT binary patch
+literal 2042
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_alert.png app/src/main/res/drawable-xxxhdpi/ic_alert.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..e421c0e091f4f82681c14656c4d36dbb6c22a0b2
+GIT binary patch
+literal 542
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_android_open.png app/src/main/res/drawable-xxxhdpi/ic_android_open.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..842e3605144907709c74da42b0d49adb48257438
+GIT binary patch
+literal 1227
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_android_star_half.png app/src/main/res/drawable-xxxhdpi/ic_android_star_half.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..2ba582040816bb420df258105a085986475ef02e
+GIT binary patch
+literal 2850
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_angle_right.png app/src/main/res/drawable-xxxhdpi/ic_angle_right.png
+index 0e2120610f05c2888234e21b857df199f75b856a..615ad70ee14ff027abd3918375366b57b94611cb
+GIT binary patch
+literal 391
+zc%17D@N?(olHy`uVBq!ia0vp^2SAvE4M+yv$zf+;VEpRo;uunK>+M}dKjuJ@wu@XU
+z+zuN=Y`7ByRTMm;R_OBGR8<hvVYseskP@fuIX$4$Md1N2=K~LkD|@Q_j5vQi`=7Al
+zWeO7m@!-JppTRP5rG*cKmK1%H`8{1#E=~2G{ru89aqe$+@@O85cmMyx_TT*HaV#ma
+z`#C)9>jWp%{ZU$ATY90qUSdB-hF-&UM#heYG^QJTJPs@-0teDcW7_|yF<qK9?P@27
+zKqJl2!T0B_($<|=@iqRKtw}>>XDheSy^rOEAN#`>{L?=$QF~JHpV&J)lr)dW$Jb6<
+z*YUBLNSOTRSpP?9`(yckB=#e7?0fuW->>{Q`TO?z&bc2aTQ-P4R{yMh;n0thatAN{
+z5N!OY%=Flu<(U7k`kvqZ?PXt|7mG6z5&jLwY8bA__~&(+<sSm^Jzf1=);T3K0RW|$
+B$Ke0~
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_arrow_return_left.png app/src/main/res/drawable-xxxhdpi/ic_arrow_return_left.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..767a727964d33363254d33c700aafc37a7a5db56
+GIT binary patch
+literal 859
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_arrow_swap.png app/src/main/res/drawable-xxxhdpi/ic_arrow_swap.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..9b7fbf14cc8958166428323ff586c74d5e8cc426
+GIT binary patch
+literal 704
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_credit_card.png app/src/main/res/drawable-xxxhdpi/ic_credit_card.png
+index 8712c0a9fd29c3efd0b2a5e34371876f6cfa7acd..2b35e16cbcece5f9eab42e64d090bae926fd1b21
+GIT binary patch
+literal 1010
+zc%17D@N?(olHy`uVBq!ia0vp^2SAvE4M+yv$zf+;U|#6y;uunK>+Rizelmd)ZHX+K
+zHZ5Z6bO{MlsNxsh+ptTCV>fq%PztM1r-Q-{1{Tly#)dOIjuVzGV!Fufpdi3ewM^0X
+zvRTQpyEiR`=c)g^6jD0d`2D8cn>mY%8L)!`4|3-mJ+z`{YN2F%=Jdx}>n_dTp7}k^
+z{_V4ew|2~!vT^=5y}y5dCg}g!`Z>bq|IFqs*6rE<cl_!sD&N~7-n{F_ao06f)3$5A
+zs|q=C`;GpewH-gdBxj#*j8xZ7vVP6*>UtjEsd*_ZleNrbC!9^XxmU*P{2%XoZ*J+_
+z7f$(l%!0MxNkGoA+h<?iyx(}^jlI&@hjxyCmmNurkYAlY?W??lq`I#BkLOzqejnbq
+zjVHmronf7{{R^#Q`(zF!f1l`<`esYV1EqF`S#@>QuR1bIjJLk@Z_--VChQ<u-8a4M
+zdWgwirnw9irx@>WGca<Hh)RSSBH4u-I2{<&7#L?Tup}@EP>Iu?z+@oYFq7d7OM+TM
+z{4?>C3x8&DF)A?73^lxCe(^|L)8|yh-RJx5SH%AU3UW9w0NumDf{z)?B5?U$m7xCb
+zKi_ZrFzn-QVPI*%f*zGwFit6alaX2BTbub~N!8TD&3iMY4zBp~<JiYfFTREx-EnmC
+ztJL@W6+vz{Kke2#{`Iut=KEnsGEZl}-0+`a)sG9`ryqZlnHO@*>pf%7xyMrvZ;&h7
+zUMR+0xhF6C|Kihc>dPlwmY$x<o@9LI?X60kw6E`M_sZQaG%%Yix^dRs<KfYQpYPj0
+zEOfZ`v}oVLU;lz_gd0n@dP@HODx7=G+~^hii>DKOe+$p|6rJt7d-3)+mlbCp+War@
+z)}@5}-0R;tU(HVCFYn2hS@k#ddZzlzlf~5+#O-iomJf%`4}4kt?4!SnGl=Wy>gTe~
+HDWM4fvYcO;
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_file_text_o.png app/src/main/res/drawable-xxxhdpi/ic_file_text_o.png
+index 5fcdf69ceb0e0c6926ab04566ad11be798279905..cacf16feb7525530fb8e66c4810e7b9abeae3547
+GIT binary patch
+literal 1282
+zc%17D@N?(olHy`uVBq!ia0vp^2SAvE4M+yv$zf+;U|Hko;uunK>+Rk3`ND+~2NGGB
+z8Xc4bggO2({9~{IvK7<{6mIM~#KI(`!enS@*y!M+Ai%-m8Q&;zM|P%?C<jXtQ{$W&
+z4ZrnV1voM_FWlREUcK_EN5=hj>rKB4AGN4>PQr#}?MsxM-sYQ=XY%pL8H3WC>F0AJ
+z`q$lA`Dl&rt6PuE7oUDR{l~(&>z}PZ^KU_4b$0c}q}|i@^lIfr->A1be|qB8WxCHb
+z&+~Hsn!l_|{Pp`sd)7uzI<+(F_feUsbN{W{pLS&bp7v;uy<FspqdwJ7YJVv_TA~~C
+zWM{o>^64EHD%lPuF-ACXFc=6hBq%T(a9}ua{_>H@SLO!`uQt~CsLsLQ!M)(mvGTvU
+zF*^IdG%++xVc7To&Vs&Z0fq@;2R@!ZS3Xyig`q^6frViSI|C!bOGXC<hbji3tQ-}D
+z&h#$mYB!T>@ME4K-dHZeaG{c+SV_WKlxe|dhG$L}{>A3lG0bH*U~l5@V`BKibYQ-c
+zM*gNPe?d%n#TAcQ-?A?-XHdKU^cxRH-?eX#c^DYJupL;VZzB^@$jiV`#hg&2wZ+)9
+z!D<@=!-MtAFD~q1V`$jJFzW{g1H;UI24IRXc)RoKSG#?afjXDH`Z3j=fnmbdqL&Vq
+zsSFGaTX<jXU<WB=T7K(%k~{;$C9|KouO)zV*t&(9^MO)N+BS%5A67HFeLj8r+=xX#
+znSiSIUuM7yJ|r>%$!_L?nz^+*?{0{Ro}9YshUAsStAUPreRxil=~F8u1_p~$TnlWL
+zh%qqiOOwMe;)KzBMuvnr-@Y@H?qN}|Zcx)(;u3K5-d*!TzJ@2jz-0isgOQ<ufx&@+
+zL4g4n<P1Rnf`k|3GxX(m>91E<o1}i$_hV@e|LcpQ3=A6j^KN@pn`Q`0GpMj%_;<6t
+zQ@>q~nV~^C3B&3Gz8@J<7#=LEU=U*Vs0scvSL+<p1Q{$=A-kZ8WkC#oupXCoxSQH8
+zu@?*G-rf4wg4v;n;pw6cN2WW!XPO}E@a{JwAJBN&L<}n@B-k-B9N4_Yzcu5LAj3(<
+zJ2mpl*-P)tugQ#j7FuaiRcX!y6vbjK4%a}1YnCHhVqnkk_+ShJFmet4&U9wbalDuL
+zNSWbndxGR8KZbzg+gv?<=Uh7bh2h%$qd&hLw%8=_^4aPARo<!3XW7iT7WBmGfBe>;
+z_DU5whLe0mx99#@FL+0*-Oc;b{p*|fUR?~G{crZE&%aJTEc`V8vBBMXamU~Mx5Fa;
+junR8F*@2_X2>!<Fc-m~Gax&9Nko!Dc{an^LB{Ts5jaRU`
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_ios_loop_strong.png app/src/main/res/drawable-xxxhdpi/ic_ios_loop_strong.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa067085953f31b21b71c5ad64543812b7483172
+GIT binary patch
+literal 3165
+Hc$@<O00001
+
+diff --git app/src/main/res/drawable-xxxhdpi/ic_ios_undo.png app/src/main/res/drawable-xxxhdpi/ic_ios_undo.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..b9a0a7a7f81e946ab6abe43ef1813a9e53d883b1
+GIT binary patch
+literal 1478
+Hc$@<O00001
+

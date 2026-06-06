@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".vas.activity.energy.Kaduna.KadunaElectric">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/eventsActivityTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gtColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppThemealt.PopupOverlay"
+            app:title="Eko Electric" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/backimgb"
+            android:visibility="gone"
+            android:scaleType="centerCrop" />
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_energy"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/enter_amount"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:layout_weight="10"
+        android:text="Amount"
+        android:padding="10dp"
+        android:elevation="1dp"
+        android:fontFamily="@font/lato"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:background="#f8f8f8">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/naira_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:text="\u20A6"
+                android:textStyle=""/>
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="0.00"
+                android:textSize="40sp"
+                android:textStyle="" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f1f1"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:gravity="center"
+            android:background="#ffffff">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:text="1"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:text="2"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:text="3"
+                    style="@style/keypad_style"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:text="4"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:text="5"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:text="6"
+                    style="@style/keypad_style"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:text="7"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:text="8"
+                    style="@style/keypad_style"
+                    />
+
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/keypad_style"
+                    android:text="9"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnclr"
+                    style="@style/keypad_style"
+                    android:text="\u2190"
+                    android:textSize="34dp" />
+
+                <Button
+                    android:id="@+id/btn0"
+                    style="@style/keypad_style"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn00"
+                    style="@style/keypad_style"
+                    android:text="00" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnenter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:text="ENTER"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/lato"/>
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#e7e7e7"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:text="CANCEL"
+                android:textColor="#4a4a4a"
+                android:textSize="25sp"
+                android:fontFamily="@font/lato"/>
+        </TableRow>
+    </LinearLayout>
+</LinearLayout>

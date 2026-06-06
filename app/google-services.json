@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "814566728768",
+    "firebase_url": "https://androidposlite.firebaseio.com",
+    "project_id": "androidposlite",
+    "storage_bucket": "androidposlite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814566728768:android:1110f8cccd39074c",
+        "android_client_info": {
+          "package_name": "com.iisysgroup.androidlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814566728768-q2lalkdaemud3tgpgnhcbc99l1p09h50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iisysgroup.androidlite",
+            "certificate_hash": "9817383bddf54b49f4974afddfc2641538500ea3"
+          }
+        },
+        {
+          "client_id": "814566728768-s5fnieof297iaug9rrnat3vhqea6157f.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "814566728768-s5fnieof297iaug9rrnat3vhqea6157f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGl9Mm6HFRscct3-3qZry5FiiQX5XH-gs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814566728768-s5fnieof297iaug9rrnat3vhqea6157f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iisysgroup.androidlite.VasActivity"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gtColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppThemealt.PopupOverlay"
+            app:title="Smile Data" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/backimgb"
+            android:visibility="gone"
+            android:scaleType="centerCrop" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_padding"
+        android:layout_marginRight="@dimen/medium_padding"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_marginBottom="@dimen/medium_padding">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+
+            <TextView
+                android:id="@+id/action_smile_buy_bundle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="Buy Bundle"
+                android:textColor="#299A8E"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/medium_padding"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_marginBottom="@dimen/medium_padding">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+
+            <TextView
+                android:id="@+id/action_smile_top_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="Top-up"
+                android:textColor="#299A8E"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="@dimen/medium_padding"-->
+        <!--android:layout_marginLeft="@dimen/medium_padding"-->
+        <!--android:layout_marginBottom="@dimen/medium_padding">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/action_transaction_status"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingEnd="30dp"-->
+                <!--android:paddingStart="30dp"-->
+                <!--android:text="Transaction Status"-->
+                <!--android:textColor="#299A8E"-->
+                <!--android:textSize="24dp" />-->
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+   <!-- <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/medium_padding"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_marginBottom="@dimen/medium_padding">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+
+            <TextView
+                android:id="@+id/action_smile_beneficiaries"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="Beneficiaries"
+                android:textColor="#299A8E"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>-->
+
+</LinearLayout>

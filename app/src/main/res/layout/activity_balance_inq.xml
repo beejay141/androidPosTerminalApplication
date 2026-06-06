@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iisysgroup.androidlite.payments_menu.BalanceEnquiryActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/reportActivityTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundgradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppThemealt.PopupOverlay"
+            app:title="Balance Inquiry" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/backimgb"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radio_payments_account_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_balance_enquiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/colorPrimary"
+            android:paddingStart="10dp"
+            android:text="Default"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_savings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/colorPrimary"
+            android:paddingStart="10dp"
+            android:text="Savings"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/colorPrimary"
+            android:paddingStart="10dp"
+            android:text="Current"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/colorPrimary"
+            android:paddingStart="10dp"
+            android:text="Credit"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_balance_enquiry"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/submitbutton"
+        android:fontFamily="@font/lato"
+        android:text="Check Balance"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="left|center"
+        android:layout_marginBottom="54dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="66dp"
+        android:text="Select Account Type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/radio_payments_account_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reportActivityTopBar" />
+
+</android.support.constraint.ConstraintLayout>

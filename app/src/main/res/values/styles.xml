@@ -1,0 +1,195 @@
+<resources>
+
+    <!-- Bapption theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/maindashboard</item>
+    </style>
+
+    <style name="AppThemeb" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorGreen</item>
+        <item name="colorAccent">#fff</item>
+        <item name="android:textColorHint">@color/white</item>
+
+    </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorGreen</item>
+        <item name="colorAccent">@color/colorGreen</item>
+
+    </style>
+
+    <style name="AppThemealt" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="loginaltbtn">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/login_button_bgbalt</item>
+        <item name="android:minHeight">55dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="btnstyleone">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bgbtngrad</item>
+        <item name="android:minHeight">100dp</item>
+        <item name="android:padding">30dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">30sp</item>
+        -
+    </style>
+
+    <style name="fragment_description_text_styledate">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="row_pad_style">
+        <item name="android:background">@drawable/stroke_box</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+    <style name="fragment_small_title_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">#727272</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+    <style name="row_pad_styleb">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="fragment_description_text_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingRight">1dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <style name="fragment_titledate_text_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+
+    <style name="btnstyletwo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bgbtngrad</item>
+        <item name="android:minHeight">55dp</item>
+        <item name="android:padding">30dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="rp_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--Text Input Style-->
+    <style name="styleTextInputLayoutb" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorHint">#ffffff</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/gtColor</item>
+        <item name="colorControlActivated">@color/gtColor</item>
+        <item name="colorControlHighlight">@color/gtColor</item>
+        <item name="colorBackgroundFloating">@color/menuViewColor</item>
+    </style>
+
+    <style name="AppThemealt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemealt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--<item name="colorControlNormal">@color/white</item>-->
+    <!--<item name="colorControlActivated">@color/white</item>-->
+    <!--<item name="colorControlHighlight">@color/white</item>-->
+    <!--<item name="colorBackgroundFloating">@color/white</item>-->
+    <!--</style>-->
+
+    <style name="paymentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorHint">@color/maindashboard</item>
+        <item name="colorAccent">@color/maindashboard</item>
+        <item name="colorControlNormal">@color/maindashboard</item>
+        <item name="colorControlActivated">@color/maindashboard</item>
+        <item name="colorControlHighlight">@color/maindashboard</item>
+        <item name="colorBackgroundFloating">@color/maindashboard</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="keypad_style">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#4a4a4a</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="batch_no">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="refund_and_reversal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <style name="default_receipt_style">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iisysgroup.androidlite.payments_menu.TransactionProcessActivity">
+
+    <include
+        android:id="@+id/insert_card"
+        layout="@layout/insert_card"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="visible"/>
+
+    <include
+        android:id="@+id/transaction_status_layout"
+        layout="@layout/transaction_status"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+</FrameLayout>

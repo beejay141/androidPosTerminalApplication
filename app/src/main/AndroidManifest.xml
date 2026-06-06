@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iisysgroup.androidlite">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.Manifest.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.pax.permission.MAGCARD" />
+    <uses-permission android:name="com.pax.permission.PED" />
+    <uses-permission android:name="com.pax.permission.ICC" />
+    <uses-permission android:name="com.pax.permission.PICC" />
+    <uses-permission android:name="com.pax.permission.PRINTER" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".payments_menu.MainVasActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".login.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".payments_menu.PaymentsActivity" />
+        </activity>
+        <activity
+            android:name=".PrintTesting"
+            android:exported="true"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Menu Options"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".payments_menu.PaymentsActivity" />
+    </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".TermMagmActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".payments_menu.PaymentsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.MainActivity" />
+        </activity>
+        <activity
+            android:name=".payments_menu.PurchaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Transactions"
+            android:launchMode="singleTask"
+            android:parentActivityName=".payments_menu.PaymentsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.MainActivity" />
+        </activity>
+        <activity
+            android:name=".payments_menu.BalanceEnquiryActivity"
+            android:parentActivityName=".payments_menu.PaymentsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.payments_menu.PaymentsActivity" />
+        </activity>
+        <activity
+            android:name=".all_history.AllHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".all_history.AllHistoryDetailActivity"
+            android:parentActivityName=".all_history.AllHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments_menu.CashBack"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments_menu.CashAdvance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payments_menu.RefundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vas.airtime_and_data.AirtimeActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="VasActivity" />
+        </activity>
+        <activity
+            android:name=".EnergyActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="VasActivity" />
+        </activity>
+        <activity
+            android:name=".VasActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".payments_menu.PaymentsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.payments_menu.PaymentsActivity" />
+        </activity>
+        <activity
+            android:name=".TransactionDetails"
+            android:parentActivityName=".Transactions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.Transactions" />
+        </activity>
+        <activity android:name=".payments_menu.TransactionProcessActivity" />
+        <activity
+            android:name=".WalletBalance"
+            android:parentActivityName=".payments_menu.PaymentsActivity" />
+        <activity
+            android:name=".QRScannerActivity"
+            android:parentActivityName=".payments_menu.PaymentsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.MainActivity" />
+        </activity>
+        <activity
+            android:name=".vas.activity.education.EduActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".SummaryAnalysis"
+            android:parentActivityName=".Transactions" />
+        <activity
+            android:name=".EventsActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity android:name=".Leadway" />
+        <activity android:name=".Cornerstone" />
+        <activity android:name=".buy_policy" />
+        <activity android:name=".buy_policy2" />
+        <activity
+            android:name=".vas.activity.Insurance"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".vas.activity.EnergyActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".vas.activity.energy.Ikeja.IkejaElectric"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Abuja.AbujaElectric"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Eko.EkoElectric"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Enugu.EnuguElectric"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Ibadan.Ibedc"
+            android:launchMode="singleTask" />
+        <activity android:name=".vas.activity.energy.Kaduna.KadunaElectric" />
+        <activity android:name=".vas.activity.energy.Kano.KanoElectric" />
+        <activity
+            android:name=".vas.activity.energy.PortHarcourt.PHElectric"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Ikeja.IkejaPrepaid"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Ikeja.IkejaPostpaid"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Abuja.AbujaPostpaid"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Abuja.AbujaPrepaid"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.activity.energy.Eko.EkoPostpaid"
+            android:launchMode="singleTask" />
+        <activity android:name=".vas.activity.energy.Enugu.EnuguPostpaid" />
+        <activity android:name=".vas.activity.energy.Enugu.EnuguPrepaid" />
+        <activity android:name=".vas.activity.energy.Ibadan.IbadanPostpaid" />
+        <activity android:name=".vas.activity.energy.Ibadan.IbadanPrepaid" />
+        <activity android:name=".vas.activity.energy.Kaduna.KadunaPostpaid" />
+        <activity android:name=".vas.activity.energy.Kaduna.KadunaPrepaid" />
+        <activity android:name=".vas.activity.energy.Kano.KanoPostpaid" />
+        <activity android:name=".vas.activity.energy.Kano.KanoPrepaid" />
+        <activity android:name=".vas.activity.energy.PortHarcourt.PHPostpaid" />
+        <activity android:name=".vas.activity.energy.PortHarcourt.PHPrepaid" />
+        <activity
+            android:name=".vas.activity.CableTVActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".vas.activity.EventsActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".vas.activity.GamesActivity"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity
+            android:name=".vas.internet.InternetSubscription"
+            android:parentActivityName=".VasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iisysgroup.androidlite.VasActivity" />
+        </activity>
+        <activity android:name=".vas.activity.MoneyTransferActivity" />
+        <activity android:name=".vas.cable.Gotv" />
+        <activity android:name=".vas.cable.Dstv" />
+        <activity android:name=".vas.cable.startimes.Startimes" />
+        <activity android:name=".ConsatVAS" />
+        <activity android:name=".ConsatTVOptions" />
+        <activity android:name=".ConsatBuyVoucher" />
+        <activity android:name=".payments_menu.DigitalPayments" />
+        <activity android:name=".vas.activity.AllVasActivity" />
+        <activity
+            android:name=".vas.airtime_and_data.SelectionActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.airtime_and_data.DataActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".vas.airtime_and_data.AllData" />
+        <activity android:name=".vas.airtime_and_data.DataPhoneEntry" />
+        <activity
+            android:name=".cardpaymentprocessors.PurchaseProcessor"
+            android:process="com.pax.detectCard"
+            android:exported="true" />
+        <activity android:name=".cardpaymentprocessors.TransactionCompleteDisplay" />
+        <activity
+            android:name=".vas.airtime_and_data.AirtimeBeneficiariesActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".vas.airtime_and_data.DataBeneficiariesActivity" />
+        <activity
+            android:name=".vas.activity.energy.Eko.EkoPrepaid"
+            android:launchMode="singleTask" />
+        <activity android:name=".payments_menu.Withdrawal" />
+        <activity
+            android:name=".payments_menu.transfer.TransferBankSelection"
+            android:exported="true" />
+        <activity android:name=".payments_menu.transfer.TransferAmountEntry" />
+        <activity
+            android:name=".vas.internet.smile.SmileLookup"
+            android:launchMode="singleTask" />
+        <activity android:name=".vas.internet.smile.SmileActionSelection" />
+        <activity
+            android:name=".vas.internet.smile.BuyBundle"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.internet.smile.SmileTopup"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".vas.internet.smile.SmileTransactionStatus"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".utils.EnterPinActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PrintActivity"
+            android:exported="true" />
+        <activity android:name=".vas.activity.energy.Eko.EkoPrinter" />
+        <activity android:name=".vas.internet.smile.SmilePrinter" />
+        <activity
+            android:name=".PrintTest"
+            android:exported="true" />
+        <!--<activity android:name=".vas.activity.Genesis.MoviesList" />-->
+        <activity android:name=".vas.activity.Genesis.MovieHouse" />
+        <activity android:name=".vas.activity.Genesis.GenesisMovieListActivity" />
+        <activity
+            android:name=".history_summary.TransactionHistory"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".history_summary.EODActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".history_summary.TransactionSummary" />
+        <activity android:name=".history_summary.TransactionsMenu" />
+        <activity android:name=".EncryptionTest" />
+        <activity android:name=".cardpaymentprocessors.VasPurchaseProcessor"
+            android:process="com.pax.detectCard"
+            />
+
+        <meta-data
+            android:name="com.bugsnag.android.API_KEY"
+            android:value="0bf1f19325b21996dc22f905ae599492" />
+    </application>
+
+</manifest>

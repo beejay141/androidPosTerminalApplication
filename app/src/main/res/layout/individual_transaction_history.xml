@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/history_header_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft ="@dimen/medium_padding"
+        android:paddingRight ="@dimen/medium_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/history_transaction_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Transaction type"
+            android:paddingTop="@dimen/medium_padding"
+            android:paddingLeft = "@dimen/medium_padding"
+            android:layout_weight="1"
+            android:gravity="start"/>
+
+        <TextView
+            android:id="@+id/history_beneficiary_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beneficiary name"
+            android:paddingTop="@dimen/medium_padding"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/medium_padding"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#f6fbfe"
+        android:layout_below="@id/history_header_info"
+        android:padding= "@dimen/medium_padding">
+
+        <TextView
+            android:id="@+id/history_transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/medium_padding"
+            android:textSize="28sp"
+            android:text="\u20A6"/>
+
+        <TextView
+            android:id="@+id/history_transaction_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/medium_padding"
+            android:layout_alignParentBottom="true"
+            android:text="3239419083129231"/>
+
+
+        <Button
+            android:id="@+id/view_details_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            style="@style/TextAppearance.AppCompat.Widget.Button"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginRight="@dimen/medium_padding"
+            android:text="VIEW DETAILS"
+            android:padding="8dp"
+            android:background="@drawable/backbutton"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

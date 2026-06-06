@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/reportActivityTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppThemealt.PopupOverlay"
+                    app:title="Airtime" />
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/backimgb"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="MTN"
+                            android:gravity="center_vertical"
+                            android:paddingStart="30dp"
+                            android:textSize="24dp"
+                            android:textColor="#299A8E"
+                            android:drawablePadding="10dp"
+                            android:paddingEnd="30dp"
+                            android:drawableLeft="@drawable/mtn_logo" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/airtel"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="AIRTEL"
+                            android:gravity="center_vertical"
+                            android:paddingStart="30dp"
+                            android:textSize="24dp"
+                            android:textColor="#299A8E"
+                            android:background="@color/recyclerview_dark"
+                            android:paddingEnd="30dp"
+                            android:drawableLeft="@drawable/airtel_logo"
+                            android:drawablePadding="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/nine_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="9MOBILE"
+                            android:gravity="center_vertical"
+                            android:paddingStart="30dp"
+                            android:textSize="24dp"
+                            android:textColor="#299A8E"
+                            android:drawableLeft="@drawable/ninemobile_logo"
+                            android:drawablePadding="10dp"
+                            android:paddingEnd="30dp"
+                            android:background="@color/recyclerview_light"
+                            />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/glo"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="GLO"
+                            android:gravity="center_vertical"
+                            android:paddingStart="30dp"
+                            android:textSize="24dp"
+                            android:textColor="#299A8E"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/glo_logo"
+                            android:paddingEnd="30dp"
+                            android:background="@color/recyclerview_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/beneficiaries"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Beneficiaries"
+                            android:gravity="center_vertical"
+                            android:paddingStart="30dp"
+                            android:textSize="24dp"
+                            android:textColor="#299A8E"
+                            android:drawablePadding="10dp"
+                            android:paddingEnd="30dp"
+                            android:background="@color/recyclerview_light" />
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+

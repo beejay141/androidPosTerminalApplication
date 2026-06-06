@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context=".EODActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:popupTheme="@style/AppThemealt.PopupOverlay"
+        app:title="EOD"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary" />
+
+    <ScrollView
+        android:id="@+id/scrollEod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+    <RelativeLayout
+        android:id="@+id/relEod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/terminalOwnerLogo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"  />
+
+        <TextView
+            android:id="@+id/merchantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="ITEX MERCHANT SERVICE"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/terminalOwnerLogo"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:id="@+id/terminalIDandDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@id/merchantName">
+
+            <TextView
+                android:id="@+id/EODDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18/09/2018 09:49:13"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/terminalID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22144U69G"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/transactionReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRANSACTION REPORT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/terminalIDandDate"/>
+
+       <include android:id="@+id/approved"
+           layout="@layout/eod_approved_history"
+           android:layout_below="@+id/transactionReport"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"/>
+
+        <include android:id="@+id/declined"
+            layout="@layout/eod_declined_history"
+            android:layout_below="@+id/approved"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/historyProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>
